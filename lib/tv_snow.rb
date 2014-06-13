@@ -17,12 +17,12 @@ module TvSnow
       check_or_create(deploy_dir + img_dir)
 
       # Copy all markup to be deployed, compile if necessary
-      compile("slimrb", "slim", ".", deploy_dir)
-      compile("haml", "haml", ".", deploy_dir)
+      compile_type("slimrb", "slim", ".", deploy_dir)
+      compile_type("haml", "haml", ".", deploy_dir)
       copy_files("html", "", deploy_dir)
 
       # Copy all stylesheets, compile if necessary
-      compile("sass", "scss", css_dir, deploy_dir + css_dir)
+      compile_type("sass", "scss", css_dir, deploy_dir + css_dir)
       copy_files("css", css_dir, deploy_dir)
 
       # Copy Javascript, compile if necessary
@@ -43,7 +43,7 @@ module TvSnow
 
     # Runs a given command, compiling all of the given file types and outputting
     # the result into a given destination
-    def compile(command, ext, source_dir, dest_dir)
+    def compile_type(command, ext, source_dir, dest_dir)
       Dir.glob("#{ source_dir }/*.#{ ext }") do |file|
         new_file_name = File.basename(file)[0..-(ext.length + 2)]
         puts "Compiling #{ file } to #{ new_file_name }..."
