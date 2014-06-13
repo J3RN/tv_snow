@@ -4,13 +4,11 @@ A Ruby gem for compiling static sites!
 
 ## Installation
 
-Someday, you will be able to run `$ gem install tv_snow` and have it work.
-It doesn't yet.
+The installation here is super hard. You run:
 
-Currently, you can install the gem by downloading it from this lovely Github
-project page, entering the directory, and running
+```$ gem install tv_snow```
 
-```$ rake install```
+Then you're finished! You survived!
 
 ## Usage
 
