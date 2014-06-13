@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'tv_snow'
+
+compiler = TvSnow::Compiler.new
+compiler.compile
