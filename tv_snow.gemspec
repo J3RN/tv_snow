@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = "TV Snow will compile a static site from all of your
                         favorite Ruby templating tools, such as Sass, Slim,
                         Haml, and others."
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/J3RN/tv_snow"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
